@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portais de Clientes</title>
+</head>
+<body>
+
+<header>
+<section class="titulo_formulario">
+    <h1>REGISTROS DE ACESSOS</h1>
+    <P>Portais de Clientes</P>
+</section>
+</header>
+
+
+<div>
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</div >
+
+
+
+<form action="https://api.sheetmonkey.io/form/rgmEox7dRs7tsabwx8f42a" method="post">
+
+
+
+<input  type="text" name="célula" placeholder="Célula" class="inputs">
+    <span class="span-required"></span>
+</div>
+
+
+<div>
+<input type="text" name="cliente" placeholder="Cliente" class="inputs">
+    <span class="span-required"></span>
+</div>
+
+
+<div>
+<input type="text" name="link/site" placeholder="Link/Site" class="inputs">
+    <span class="span-required"></span>
+</div>
+
+<div>
+<input type="text" name="login" placeholder="Login" class="inputs">
+    <span class="span-required"></span>
+</div>
+
+<div>
+<input type="text" name="senha" placeholder="Senha" class="inputs">
+    <span class="span-required"></span>
+</div>
+
+</div>
+    <button class="btn_submit" type="submit">Adicionar</button>
+</div>
+
+
+</div> 
+   <button class="btn_reset" type="reset">Limpar</button>
+</div>
+
+
+<button class="link-as-button">
+   <a class="link" href="https://bit.ly/3MEvwlR" target="_blank">Editar</a>
+</button>
+</a>
+
+
+
+<script>
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+
+const Célua=document.querySelector('input[name=célula]').value;
+const cliente=document.querySelector('input[name=cliente]').value;
+const linksite=document.querySelector('input[name=linksite]').value;
+const login=document.querySelector('input[name=login]').value;
+const senha=document.querySelector('input[name=senha]').value;
+
+fetch('https://api.sheetmonkey.io/form/rgmEox7dRs7tsabwx8f42a' , {
+    
+    method:'post'
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type':'application/json',  
+},
+body: JSON.stringify({célula, cliente, linksite, login,senha}),
+});
+
+}
+
+document.querySelector('form').addEventListener('submit' , handleSubmit);
+
+</script>
+</form>
+</body>
+
+
